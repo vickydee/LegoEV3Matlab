@@ -1,13 +1,11 @@
 brick.SetColorMode(1, 2);
 color = brick.ColorCode(1);
  %% red
-
-        brick.MoveMotor('AB', 20);
-        while (color == 5) 
-           brick.beep;
-           run('stop.m');
-            pause(3);
-        end
+     if(color == 5)
+       brick.beep;
+       run('stop.m');
+       pause(3);
+     end
 
 %% blue
     if(color == 2)
