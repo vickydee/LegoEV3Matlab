@@ -20,7 +20,7 @@ color = brick.ColorCode(1);
         brick.beep;
         brick.beep;
         run('stop.m');
-        %%pause(1);
+        pause(6);
     end
 %% yellow
     if (color == 7)
