@@ -1,22 +1,19 @@
-%% Variables
-dist = brick.UltrasonicDist(2);
-    % ultrasonic
-    touch = brick.TouchPressed(3);
-    % touch
-
-
 %% Move Forward
 
 while 1
 
-    % The robot moves through detecting what's on the right
-    run('moveForward.m')
-    run('colorSensor.m')
+%% Initializing variables in  loop to constantly update the values
+    dist = brick.UltrasonicDist(2) % ultrasonic
+    touch = brick.TouchPressed(3) % touch
+    run('colorSensor.m') % color
 
-    %% dist dictates a left turn
+% The robot moves through detecting what's on the right
+    run('moveForward.m')
+
+%% dist dictates a left turn
     if dist >= 40
         run('stop.m')
-        % pi/2 left turn
+    % pi/2 left turn
         brick.MoveMotor('A',100);
         brick.MoveMotor('B',-100);
         pause(2.75);
@@ -31,7 +28,7 @@ while 1
         run('stop.m')
     end
 
-    %% touch dictates a right turn
+%% touch dictates a right turn
     if touch == true
         run('moveBackward');
         pause(0.7);
