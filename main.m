@@ -13,10 +13,10 @@ while 1
 %% dist dictates a left turn
     if dist >= 40
         run('stop.m')
-    % pi/2 left turn
-        brick.MoveMotor('A',100);
-        brick.MoveMotor('B',-100);
-        pause(2.75);
+        % pi/2 left turn
+            brick.MoveMotor('A',100);
+            brick.MoveMotor('B',-100);
+            pause(2.75);
     end
     while (dist == 255)
         brick.MoveMotor('A',-90);
