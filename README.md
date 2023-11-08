@@ -5,8 +5,9 @@
 Running this will wholly and completely run the robot
 
 ## code for movement (self explanatory names)
-### moveForward
-### moveBackward
+#### moveForward
+#### moveBackward
+#### stop
 
 ## colorSensor
 Coded color sensor detection
