@@ -9,10 +9,9 @@ color = brick.ColorCode(1);
 
 %% blue
     if(color == 2)
-        brick.beep;
-        brick.beep;
+        disp("blue");
         run('stop.m');
-        pause(6);
+        run('remotecontrol.m');
     end
 %% green
    if (color == 3)

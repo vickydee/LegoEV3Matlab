@@ -1,1 +1,1 @@
-brick.MoveMotor('AB', -50);
+brick.MoveMotor('AB', -55);
