@@ -7,14 +7,14 @@ while 1
     touch = brick.TouchPressed(3); 
 
   % color
-    run('colorSensor.m')
+    run('1_colorSensor.m')
 
 % Moves forward
-    run('moveForward.m')
+    run('1_moveForward.m')
 
 %% Inertia
     if dist >= 40
-        run('stop.m')
+        run('1_stop.m')
 
       % pi/2 left turn
         brick.MoveMotor('A',100);
@@ -25,9 +25,9 @@ while 1
 
 %% touch dictates a right turn
     if touch == true
-        run('moveBackward');
+        run('1_moveBackward');
         pause(0.7);
-        run('stop.m')
+        run('1_stop.m')
         brick.MoveMotor('A',-100);
         brick.MoveMotor('B',100);
         pause(2.6);
