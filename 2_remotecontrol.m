@@ -9,10 +9,10 @@ while 1
             run('startup.m');
         %% autorun robot
         case 'uparrow'
-            run('moveForward.m')
+            run('1_moveForward.m')
         case 'downarrow'
             disp('Down Arrow');
-            run('moveBackward.m')
+            run('1_moveBackward.m')
         % left turn
         case 'leftarrow'
             brick.MoveMotor('A',100);
@@ -30,7 +30,8 @@ while 1
         case 'd'
             brick.MoveMotor('C',-50);
         case 0
-            brick.StopAllMotors('Brake');
+            %brick.StopAllMotors('Brake');
+            run('1_stop.m);
         % quit
         case 'q'
             break;
