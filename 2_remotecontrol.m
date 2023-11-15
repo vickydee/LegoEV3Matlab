@@ -31,7 +31,7 @@ while 1
             brick.MoveMotor('C',-50);
         case 0
             %brick.StopAllMotors('Brake');
-            run('1_stop.m);
+            run('1_stop.m');
         % quit
         case 'q'
             break;
